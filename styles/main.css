@@ -1,0 +1,318 @@
+/* Base Styles */
+:root {
+  /* Color system */
+  --primary-50: #e6f0f9;
+  --primary-100: #cce1f3;
+  --primary-200: #99c3e7;
+  --primary-300: #66a4db;
+  --primary-400: #3386cf;
+  --primary-500: #0068c3;
+  --primary-600: #0056a4;
+  --primary-700: #004585;
+  --primary-800: #003366;
+  --primary-900: #002247;
+  
+  --secondary-50: #fef9e6;
+  --secondary-100: #fdf3cc;
+  --secondary-200: #fbe899;
+  --secondary-300: #f9dc66;
+  --secondary-400: #f8d033;
+  --secondary-500: #f7c400;
+  --secondary-600: #f7c948;
+  --secondary-700: #daa800;
+  --secondary-800: #b28900;
+  --secondary-900: #8a6a00;
+  
+  --accent-50: #f9e6e9;
+  --accent-100: #f3ccd3;
+  --accent-200: #e799a7;
+  --accent-300: #db667b;
+  --accent-400: #cf334f;
+  --accent-500: #c30023;
+  --accent-600: #c8102e;
+  --accent-700: #a4001e;
+  --accent-800: #850018;
+  --accent-900: #660012;
+  
+  --success-500: #10b981;
+  --warning-500: #f59e0b;
+  --error-500: #ef4444;
+  
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  
+  /* Font system */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Spacing system (8px grid) */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem;    /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem;  /* 24px */
+  --space-8: 2rem;    /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem;   /* 48px */
+  --space-16: 4rem;   /* 64px */
+  --space-20: 5rem;   /* 80px */
+  --space-24: 6rem;   /* 96px */
+  
+  /* Border radius */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem;  /* 8px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-2xl: 1rem;   /* 16px */
+  
+  /* Shadow */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray-800);
+  background-color: var(--gray-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--primary-600);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-700);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--space-4) 0;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--gray-900);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 var(--space-4) 0;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  margin-bottom: var(--space-3);
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-600);
+  border-radius: 2px;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: var(--space-4) auto 0;
+}
+
+.section-header.left-aligned {
+  text-align: left;
+}
+
+.section-header.left-aligned h2::after {
+  left: 0;
+  transform: none;
+}
+
+/* Button Styles */
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--primary-600);
+  color: white;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-700);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.primary-btn svg {
+  margin-left: var(--space-2);
+  transition: transform var(--transition-normal);
+}
+
+.primary-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  background-color: transparent;
+  color: var(--primary-600);
+  font-weight: 600;
+  border: 2px solid var(--primary-600);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.secondary-btn:hover {
+  background-color: var(--primary-50);
+  color: var(--primary-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.text-link {
+  color: var(--primary-600);
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary-600);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform var(--transition-normal);
+}
+
+.text-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Sections */
+section {
+  padding: var(--space-16) 0;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  section {
+    padding: var(--space-12) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-8);
+  }
+}

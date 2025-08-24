@@ -1,0 +1,16 @@
+/* Font utility classes */
+.font-mukta {
+  font-family: "Mukta", sans-serif;
+}
+.font-noto {
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+.font-tiro {
+  font-family: "Tiro Devanagari Marathi", serif;
+}
+.font-yatra {
+  font-family: "Yatra One", cursive;
+}
+.font-baloo {
+  font-family: "Baloo 2", cursive;
+}
