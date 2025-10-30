@@ -62,7 +62,7 @@ app.post('/ask', async (req, res) => {
     }
 
     // Use Gemini with contextual system prompt
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const messages = [
       {
