@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DAGA Education</title>
+  <title>प्रवेश अर्ज — DAGA Education</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Baloo+2:wght@400..800&family=Noto+Sans+Devanagari:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/hero.css">
   <link rel="stylesheet" href="styles/programs.css">
@@ -16,271 +19,89 @@
   <link rel="stylesheet" href="styles/chat.css">
   <link rel="stylesheet" href="styles/founder.css">
   <link rel="stylesheet" href="styles/staff.css">
-    <!-- Google Fonts for Marathi support -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Baloo+2:wght@400..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Tiro+Devanagari+Marathi:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet">
-  <!--favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/dark-mode.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/lightbox.css">
+  <link rel="stylesheet" href="styles/announcement-toast.css">
 </head>
 <body>
-  <!-- Header -->
-  <header id="header" class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">
-          <a href="images/logo.png">Dnyansiddhi Adarsh Gurukul Academy</a>
-        </div>
-        <nav class="desktop-nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#about" class="nav-link">About Us<span class="dropdown-arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="founder_message.html">Founder's Message</a></li>
-                <li><a href="executive-director1.html">DAGA Executive-director</a></li>
-                <li><a href="executive-director2.html">DSA Executive-director</a></li>
-                <li><a href="principle.html">Principle's Message</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#programs" class="nav-link">Admissions <span class="dropdown-arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="admissions.html">Apply Now</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="event.html" class="nav-link">Events</a>
-            </li>
-            <li class="nav-item">
-              <a href="staff.html" class="nav-link">Staff</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#gallary" class="nav-link">Gallary <span class="dropdown-arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="photo_gallary.html">Photo Gallary</a></li>
-                <li><a href="video_gallary.html">Video Gallary</a></li>
-              </ul>
-            </li>
-            <!-- <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact Us</a>
-            </li> -->
-            <li class="nav-item">
-              <a href="contact_us.html" class="nav-link">Contact Us</a>
-            </li>
-          </ul>
-          <a href="admissions.html" class="apply-btn">Apply Now</a>
-        </nav>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+  <!-- Header (injected by shared-header.js) -->
+  <header id="header" class="header"></header>
+
+  <!-- Banner Section -->
+  <section class="staff-hero-banner">
+    <div class="staff-hero-overlay"></div>
+    <img src="images/founder-banner.jpg" alt="Founder Background" class="staff-bg-image">
+    <div class="staff-hero-content">
+      <h1 class="staff-heading">Apply Now</h1>
+      <p class="staff-quote">"प्रवेश हा केवळ सुरुवात आहे, घडवायचंय उज्वल भविष्य!"</p>
     </div>
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-      <div class="container">
-        <ul class="mobile-nav-list">
+  </section>
 
-          <li class="mobile-nav-item">
-            <a href="index.html">Home</a>
-          </li>
-              
-          <li class="mobile-nav-item">
-            <button class="mobile-dropdown-btn">About Us <span class="dropdown-arrow">▼</span></button>
-            <ul class="mobile-dropdown-menu">
-              <li><a href="about_us.html">About Us</a></li>
-              <li><a href="founder_message.html">Founder's Message</a></li>
-              <li><a href="executive-director1.html">DAGA Executive-director</a></li>
-              <li><a href="executive-director2.html">DSA Executive-director</a></li>
-              <li><a href="principle.html">Principle's Message</a></li>
-            </ul>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <button class="mobile-dropdown-btn">Admissions <span class="dropdown-arrow">▼</span></button>
-            <ul class="mobile-dropdown-menu">
-              <li><a href="admissions.html">Apply Now</a></li>
-            </ul>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <a href="event.html">Events</a>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <a href="staff.html">Staff</a>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <button class="mobile-dropdown-btn">Gallery <span class="dropdown-arrow">▼</span></button>
-            <ul class="mobile-dropdown-menu">
-              <li><a href="photo_gallary.html">Photo Gallery</a></li>
-              <li><a href="video_gallary.html">Video Gallery</a></li>
-            </ul>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <a href="contact_us.html">Contact Us</a>
-          </li>
-    
-          <li class="mobile-nav-item mobile-apply">
-            <a href="admissions.html" class="apply-btn">Apply Now</a>
-          </li>
-    
-        </ul>
-      </div>
-    </div>    
-  </header>
+  <!-- Form Section -->
+  <div class="contact-form-wrapper">
+    <div class="contact-form-container">
+      <form class="contact-form" id="admissionForm">
+        <h3 style="font-family:'Baloo 2','Noto Sans Devanagari',sans-serif; margin-bottom:24px;">प्रवेश अर्ज</h3>
 
-  <!-- Founder Banner Section -->
-<section class="staff-hero-banner">
-  <div class="staff-hero-overlay"></div>
-  <img src="images/founder-banner.jpg" alt="Founder Background" class="staff-bg-image">
-  <div class="staff-hero-content">
-    <h1 class="staff-heading">Apply Now</h1>
-    <p class="staff-quote">"प्रवेश हा केवळ सुरुवात आहे, घडवायचंय उज्वल भविष्य!"</p>
-  </div>
-</section>
-
- <!-- Form Content Section -->
-<div class="contact-form-wrapper">
-  <div class="contact-form-container">
-    <form class="contact-form">
-      <h3>Request Information</h3>
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" required>
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <textarea id="subject" rows="1"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone">
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="4"></textarea>
-      </div>
-      <button type="submit" class="primary-btn">Submit Request</button>
-    </form>
-  </div>
-</div>
-
-<!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <!-- Logo & Description -->
-        <div class="footer-column">
-          <div class="footer-logo">
-            <a href="/" class="footer-logo-link">
-              <img src="images/circle logo.png" alt="DAGA Education Logo" class="footer-logo-img">
-              <span class="footer-logo-text">DAGA Education</span>
-            </a>
-          </div>
-          <p class="footer-description">
-            Empowering future leaders through innovative education and practical learning experiences.
-          </p>
-          <div class="footer-social">
-            <a href="https://www.facebook.com/share/168rpjq5bm/" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/dnyansiddhi_academy/?igsh=MTdvMDNxam1ldjh6ZA%3D%3D#" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="https://www.youtube.com/@dnyansiddhiacademy" target="_blank" aria-label="YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29.94 29.94 0 0 0 1 12a29.94 29.94 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29.94 29.94 0 0 0 23 12a29.94 29.94 0 0 0-.46-5.58z"></path>
-                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
-              </svg>
-            </a>
-            <a href="https://whatsapp.com/channel/0029VbBUh6N4NVinozfFmp3M" target="_blank" aria-label="WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor">
-                <path d="M16.004 2.003a13.994 13.994 0 0 0-12.02 21.16L2 30l7.077-1.948a13.993 13.993 0 1 0 6.927-26.05zM16 26.99a10.985 10.985 0 0 1-5.62-1.537l-.4-.237-4.198 1.156 1.122-4.093-.26-.42A10.99 10.99 0 1 1 16 26.99zm6.018-8.36c-.33-.165-1.948-.963-2.25-1.073-.302-.11-.522-.165-.742.166s-.853 1.074-1.045 1.296c-.192.22-.385.247-.714.082-.33-.165-1.392-.513-2.65-1.638-.98-.873-1.64-1.952-1.832-2.28-.192-.33-.021-.508.144-.672.148-.147.33-.384.495-.576.165-.192.22-.33.33-.55.11-.22.055-.412-.028-.577-.083-.165-.742-1.785-1.018-2.45-.27-.648-.545-.56-.742-.57l-.633-.012a1.23 1.23 0 0 0-.887.412c-.308.33-1.16 1.132-1.16 2.76 0 1.628 1.188 3.2 1.353 3.42.165.22 2.345 3.57 5.682 5.003 2.338.992 3.252 1.077 4.425.908.71-.106 1.948-.793 2.222-1.56.275-.77.275-1.43.192-1.56-.082-.13-.303-.22-.633-.385z"/>
-              </svg>
-            </a>
-          </div>
+        <div class="form-group">
+          <label for="adm_name">विद्यार्थ्याचे पूर्ण नाव *</label>
+          <input type="text" id="adm_name" name="name" required placeholder="उदा. राहुल शर्मा">
         </div>
 
-        <!-- Quick Links -->
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="about_us.html">About Us</a></li>
-            <li><a href="staff.html">Our Staff</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="event.html">Events</a></li>
-            <li><a href="contact_us.html#contact">About DAGA</a></li>
-            <li><a href="photo_gallary.html">Photo Gallery</a></li>
-            <li><a href="video_gallary.html">Video Gallery</a></li>
-            <li><a href="contact_us.html#map">Find Us on Google Maps📍</a></li>
-          </ul>
+        <div class="form-group">
+          <label for="adm_phone">फोन नंबर *</label>
+          <input type="tel" id="adm_phone" name="phone" required placeholder="उदा. 9876543210">
         </div>
 
-        <!-- Programs -->
-        <div class="footer-column">
-          <h3>Programs</h3>
-          <ul class="footer-links">
-            <li><a href="#programs">Junior Programs (4th–5th)</a></li>
-            <li><a href="#programs">Middle School (6th–8th)</a></li>
-            <li><a href="#programs">High School (9th–10th)</a></li>
-            <li><a href="#programs">Foundation Courses (JEE/NEET/CET)</a></li>
-            <li><a href="#programs">SPI & Military School Prep</a></li>
-
-          </ul>
+        <div class="form-group">
+          <label for="adm_email">ईमेल पत्ता</label>
+          <input type="email" id="adm_email" name="email" placeholder="yourname@example.com">
         </div>
 
+        <div class="form-group">
+          <label for="adm_pschool">मागील शाळेचे नाव</label>
+          <input type="text" id="adm_pschool" name="pschool" placeholder="उदा. ज्ञानदीप विद्यालय">
+        </div>
 
-        <!-- Contact Us -->
-        <div class="footer-column">
-          <h3>Contact Us</h3>
-          <ul class="footer-links">
-            <li>📞 +91-9518373747</li>
-            <li>📞 +91-8788148420</li>
-            <li>📞 +91-7744062018</li>
-            <li>📞 +91-8010954006</li>
-            <li class="footer-inline-icon">
-              <a href="mailto:example@email.com">✉️dnyansiddhigurukul@gmail.com</a>
-            </li>          
-            <li>📍 Zolambi Vasahat,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nagaon Road, Ashta<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tal-Walwa, Dist-Sangli,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maharashtra – 416301</li>
-          </ul>
+        <div class="form-group">
+          <label for="adm_standard">इयत्ता (कोणत्या वर्गासाठी प्रवेश हवा)</label>
+          <input type="text" id="adm_standard" name="standard" placeholder="उदा. ७ वी">
         </div>
-      </div>
 
-      <!-- Bottom Footer -->
-      <div class="footer-bottom">
-        <div class="copyright">
-          <p>&copy; 2025 DAGA Education. All rights reserved.</p>
+        <div class="form-group">
+          <label for="adm_message">अतिरिक्त माहिती / प्रश्न</label>
+          <textarea id="adm_message" name="message" rows="3" placeholder="काही विचारायचे असल्यास येथे लिहा..."></textarea>
         </div>
-        <div class="footer-bottom-links">
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#accessibility">Accessibility</a>
-        </div>
-      </div>
+
+        <button type="submit" class="primary-btn" id="submitBtn" style="font-family:'Baloo 2','Noto Sans Devanagari',sans-serif; width:100%; font-size:1.05rem;">अर्ज पाठवा</button>
+      </form>
     </div>
-  </footer>
+  </div>
+
+  <!-- Marathi Success Modal -->
+  <div id="admissionSuccessModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:20px; padding:40px 32px; max-width:420px; width:90%; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.3); font-family:'Baloo 2','Noto Sans Devanagari',sans-serif;">
+      <div style="font-size:56px; margin-bottom:16px;">✅</div>
+      <h2 style="color:#1a1a2e; font-size:1.5rem; margin-bottom:12px;">धन्यवाद!</h2>
+      <p style="color:#374151; font-size:1.05rem; line-height:1.7; margin-bottom:24px;">
+        आपला प्रवेश अर्ज यशस्वीरित्या प्राप्त झाला आहे.<br>
+        आमचे कर्मचारी लवकरच आपल्याशी संपर्क करतील.
+      </p>
+      <button onclick="document.getElementById('admissionSuccessModal').style.display='none'"
+        style="background:linear-gradient(135deg,#4f46e5,#7c3aed); color:white; border:none; padding:12px 32px; border-radius:30px; font-size:1rem; font-weight:700; cursor:pointer; font-family:inherit;">
+        ठीक आहे
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer (injected by shared-footer.js) -->
+  <footer class="footer"></footer>
 
   <!-- Chat Widget -->
   <div class="chat-widget" id="chat-widget">
@@ -295,27 +116,98 @@
       </div>
       <div class="chat-messages" id="chat-messages">
         <div class="chat-message bot">
-          <div class="message-content">
-            Hello! I'm your DAGA Education assistant. How can I help you today?
-          </div>
+          <div class="message-content">Hello! I'm your DAGA Education assistant. How can I help you today?</div>
         </div>
       </div>
       <div class="chat-input">
-        <textarea 
-          id="chat-input-field" 
-          placeholder="Type your message..."
-          rows="1"
-        ></textarea>
+        <textarea id="chat-input-field" placeholder="Type your message..." rows="1"></textarea>
         <button id="chat-send">Send</button>
       </div>
     </div>
   </div>
 
-  <script type="module" src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/testimonials.js"></script>
-  <script src="js/programs.js"></script>
+  <!-- Shared Components -->
+  <script src="js/shared-header.js"></script>
+  <script src="js/shared-footer.js"></script>
+  <script src="js/dark-mode.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/announcement.js"></script>
+  <script src="js/announcement-toast.js"></script>
   <script src="js/chat.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script>
+  // ── EmailJS Config (fill these in after creating your EmailJS account) ──────
+  const EMAILJS_PUBLIC_KEY  = 'YOUR_EMAILJS_PUBLIC_KEY';   // From EmailJS → Account → Keys
+  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';           // From EmailJS → Email Services
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';          // From EmailJS → Email Templates
+  // ────────────────────────────────────────────────────────────────────────────
+
+  const API_BASE = 'http://localhost:3001'; // Change to your deployed URL in production
+
+  // Initialize EmailJS
+  if (EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }
+
+  document.getElementById('admissionForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'पाठवत आहे...';
+
+    const name       = document.getElementById('adm_name').value.trim();
+    const phone      = document.getElementById('adm_phone').value.trim();
+    const email      = document.getElementById('adm_email').value.trim();
+    const pschool    = document.getElementById('adm_pschool').value.trim();
+    const standard   = document.getElementById('adm_standard').value.trim();
+    const message    = document.getElementById('adm_message').value.trim();
+
+    // ── Step 1: Save to Backend DB (Admin Dashboard) ─────────────────────────
+    let savedToDB = false;
+    try {
+      const res = await fetch(`${API_BASE}/api/v1/enquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, email, previousSchool: pschool, standard, message }),
+      });
+
+      if (res.ok) {
+        savedToDB = true;
+      } else {
+        const err = await res.json();
+        console.error('Backend error:', err.message);
+      }
+    } catch (err) {
+      console.error('Could not reach backend:', err);
+    }
+
+    // ── Step 2: Send Email via EmailJS ────────────────────────────────────────
+    if (EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') {
+      try {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          from_name:     name,
+          phone:         phone,
+          reply_to:      email || 'N/A',
+          previous_school: pschool || 'N/A',
+          standard:      standard || 'N/A',
+          message:       message || 'N/A',
+        });
+      } catch (emailErr) {
+        // Email failed but we still show success — DB is the source of truth
+        console.error('EmailJS error (non-fatal):', emailErr);
+      }
+    }
+
+    // ── Step 3: Show Marathi Success Modal ────────────────────────────────────
+    document.getElementById('admissionSuccessModal').style.display = 'flex';
+    document.getElementById('admissionForm').reset();
+    btn.disabled = false;
+    btn.textContent = 'अर्ज पाठवा';
+  });
+  </script>
+
 </body>
 </html>
