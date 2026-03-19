@@ -3,146 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DAGA Education</title>
+  <title>Our Staff — DAGA Education</title>
+  <meta name="description" content="Meet the dedicated educators and staff of DAGA Education (Dnyansiddhi Adarsh Gurukul Academy). Our teaching and non-teaching staff are committed to student excellence.">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/hero.css">
-  <link rel="stylesheet" href="styles/programs.css">
   <link rel="stylesheet" href="styles/about.css">
-  <link rel="stylesheet" href="styles/news.css">
-  <link rel="stylesheet" href="styles/testimonials.css">
-  <link rel="stylesheet" href="styles/contact.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/chat.css">
   <link rel="stylesheet" href="styles/staff.css">
-  <!-- Google Fonts for Marathi support -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Baloo+2:wght@400..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Tiro+Devanagari+Marathi:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet">
-    <!--favicon-->
+  <link rel="stylesheet" href="styles/dark-mode.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/lightbox.css">
+  <link rel="stylesheet" href="styles/announcement-toast.css">
+  <!-- Google Fonts for Marathi -->
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+
+  <style>
+    /* ─── Loading Spinner ─── */
+    .staff-loading {
+      text-align: center;
+      padding: 80px 20px;
+      color: #64748b;
+    }
+    .staff-spinner {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border: 4px solid #e0e7ff;
+      border-top-color: #4f46e5;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 16px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    /* Department section heading color support */
+    .staff-section h2 {
+      font-size: 26px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header id="header" class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">
-          <a href="images/logo.png">Dnyansiddhi Adarsh Gurukul Academy</a>
-        </div>
-        <nav class="desktop-nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#about" class="nav-link">About Us<span class="dropdown-arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="founder_message.html">Founder's Message</a></li>
-                <li><a href="executive-director1.html">DAGA Executive-director</a></li>
-                <li><a href="executive-director2.html">DSA Executive-director</a></li>
-                <li><a href="principle.html">Principle's Message</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#programs" class="nav-link">Admissions <span class="dropdown-arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="admissions.html">Apply Now</a></li>
+  <!-- Header (injected by shared-header.js) -->
+  <header id="header" class="header"></header>
 
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#news" class="nav-link">Events</a>
-            </li>
-            <li class="nav-item">
-              <a href="staff.html" class="nav-link">Staff</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#gallary" class="nav-link">Gallary <span class="dropdown-arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="photo_gallary.html">Photo Gallary</a></li>
-                <li><a href="video_gallary.html">Video Gallary</a></li>
-              </ul>
-            </li>
-            <!-- <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact Us</a>
-            </li> -->
-            <li class="nav-item">
-              <a href="contact_us.html" class="nav-link">Contact Us</a>
-            </li>
-          </ul>
-          <a href="admissions.html" class="apply-btn">Apply Now</a>
-        </nav>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-      <div class="container">
-        <ul class="mobile-nav-list">
-
-          <li class="mobile-nav-item">
-            <a href="index.html">Home</a>
-          </li>
-              
-          <li class="mobile-nav-item">
-            <button class="mobile-dropdown-btn">About Us <span class="dropdown-arrow">▼</span></button>
-            <ul class="mobile-dropdown-menu">
-              <li><a href="about_us.html">About Us</a></li>
-              <li><a href="founder_message.html">Founder's Message</a></li>
-              <li><a href="executive-director1.html">DAGA Executive-director</a></li>
-              <li><a href="executive-director2.html">DSA Executive-director</a></li>
-              <li><a href="principle.html">Principle's Message</a></li>
-            </ul>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <button class="mobile-dropdown-btn">Admissions <span class="dropdown-arrow">▼</span></button>
-            <ul class="mobile-dropdown-menu">
-              <li><a href="admissions.html">Apply Now</a></li>
-
-            </ul>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <a href="event.html">Events</a>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <a href="staff.html">Staff</a>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <button class="mobile-dropdown-btn">Gallery <span class="dropdown-arrow">▼</span></button>
-            <ul class="mobile-dropdown-menu">
-              <li><a href="photo_gallary.html">Photo Gallery</a></li>
-              <li><a href="video_gallary.html">Video Gallery</a></li>
-            </ul>
-          </li>
-    
-          <li class="mobile-nav-item">
-            <a href="contact_us.html">Contact Us</a>
-          </li>
-    
-          <li class="mobile-nav-item mobile-apply">
-            <a href="admissions.html" class="apply-btn">Apply Now</a>
-          </li>
-    
-        </ul>
-      </div>
-    </div>    
-  </header>
-
-  <!-- Staff Banner Section -->
+  <!-- Staff Hero Banner -->
   <section class="staff-hero-banner">
     <div class="staff-hero-overlay"></div>
     <img src="images/staff-banner.jpg" alt="Staff Background" class="staff-bg-image">
@@ -152,269 +73,19 @@
     </div>
   </section>
 
-<!--  Teacher section start here -->
-<section class="staff-section">
-    <h2>Our Teaching Staff</h2>
-    <div class="staff-grid">
-      <div class="staff-card" data-modal-id="modal1">
-        <img src="images/teacher-1.png" alt="Staff 1">
-        <h4 class="staff-name">श्री. पठाण एस.</h4>
-        <p class="staff-title">M.A., B.Ed. – Principal</p>
-      </div>
-  
-      <div class="staff-card" data-modal-id="modal2">
-        <img src="images/teacher-2.png" alt="Staff 2">
-        <h4 class="staff-name">सौ. देसाई एस.डी.</h4>
-        <p class="staff-title">M.A., B.Ed. – HOD</p>
-      </div>
-  
-      <div class="staff-card" data-modal-id="modal3">
-        <img src="images/teacher-3.png" alt="Staff 3">
-        <h4 class="staff-name">सौ.सुतार एस.एल.</h4>
-        <p class="staff-title">M.Sc., B.Ed.</p>
-      </div>
-  
-      <div class="staff-card" data-modal-id="modal4">
-        <img src="images/teacher-4.png" alt="Staff 4">
-        <h4 class="staff-name">Prof. P. S. Dange</h4>
-        <p class="staff-title">Secretary</p>
-      </div>
-
-      <div class="staff-grid">
-        <div class="staff-card" data-modal-id="modal1">
-          <img src="images/teacher-5.png" alt="Staff 5">
-          <h4 class="staff-name">सौ.पाटील एस.एस.</h4>
-          <p class="staff-title">M.Sc., B.Ed</p>
-        </div>
-    
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-6.png" alt="Staff 2">
-          <h4 class="staff-name">सौ.पाटील ए.एस.</h4>
-          <p class="staff-title">B.Sc., B.Ed</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-7.png" alt="Staff 2">
-          <h4 class="staff-name">सौ.जाधव एस.एस.</h4>
-          <p class="staff-title">B.Sc., B.Ed</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-8.png" alt="Staff 2">
-          <h4 class="staff-name">Dr. Laxman Waghmode</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-9.png" alt="Staff 2">
-          <h4 class="staff-name">श्री.खोत आर.के.</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-10.png" alt="Staff 2">
-          <h4 class="staff-name">Dr. Laxman Waghmode</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-11.png" alt="Staff 2">
-          <h4 class="staff-name">Dr. Laxman Waghmode</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-12.png" alt="Staff 2">
-          <h4 class="staff-name">Dr. Laxman Waghmode</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-13.png" alt="Staff 2">
-          <h4 class="staff-name">Dr. Laxman Waghmode</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-14.png" alt="Staff 2">
-          <h4 class="staff-name">सौ. राजमाने पी.एस.</h4>
-          <p class="staff-title">M.A. ,B.Ed.</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/teacher-15.png" alt="Staff 2">
-          <h4 class="staff-name">Dr. Laxman Waghmode</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-
-        
-        <!-------------Foundation Staff----------------->
-        
+  <!-- Dynamic Staff Container -->
+  <div id="staff-dynamic-container">
+    <!-- Loading state -->
+    <section class="staff-section">
+      <div class="staff-loading">
+        <div class="staff-spinner"></div>
+        <p>Loading staff information…</p>
       </div>
     </section>
-    <section class="staff-section">
-      <h2>Foundation Staff</h2>
-      <div class="staff-grid">
-        <div class="staff-card" data-modal-id="modal1">
-          <img src="images/Foundation-teacher1.png" alt="Staff 1">
-          <h4 class="staff-name">प्रो. कदम एन. पी.</h4>
-          <p class="staff-title">B.E. (Electrical)</p>
-        </div>
+  </div>
 
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/Foundation-teacher2.png" alt="Staff 2">
-          <h4 class="staff-name">प्रो. यादव व्हि. डी.</h4>
-          <p class="staff-title">B.E. (Electrical)</p>
-        </div>
-        
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/Foundation-teacher3.png" alt="Staff 2">
-          <h4 class="staff-name">प्रो. चव्हाण एस. एस.</h4>
-          <p class="staff-title">M.Sc. (Organic Chemistry), B.Ed.</p>
-        </div>
-      </div>
-    </section>
-<!-- Non Teaching Staff-->
-    <section class="staff-section">
-      <h2>Non-teaching Staff</h2>
-      <div class="staff-grid">
-        <div class="staff-card" data-modal-id="modal1">
-          <img src="images/NT-1.png" alt="Staff 1">
-          <h4 class="staff-name">श्री. शिंदे आर.</h4>
-          <p class="staff-title">M.A., B.Ed. – History/Marathi.</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/NT-2.png" alt="Staff 2">
-          <h4 class="staff-name">श्री.राठोड व्ही.टी.</h4>
-          <p class="staff-title">M.Com.</p>
-        </div>
-
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/NT-3.png" alt="Staff 2">
-          <h4 class="staff-name">श्री.वाघमोडे एस.एस.</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-    
-
-
-    
-        <div class="staff-card" data-modal-id="modal2">
-          <img src="images/NT-4.png" alt="Staff 2">
-          <h4 class="staff-name">Shri. Kiran Kadam</h4>
-          <p class="staff-title">In-Charge Director</p>
-        </div>
-    
-        <div class="staff-card" data-modal-id="modal3">
-          <img src="images/NT-5.png" alt="Staff 3">
-          <h4 class="staff-name">Shri. P. K. Kadam</h4>
-          <p class="staff-title">Executive Director</p>
-        </div>
-    </div>
-  </section>
-  <!-- Teacher section ends -->
-
-  
-<!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <!-- Logo & Description -->
-        <div class="footer-column">
-          <div class="footer-logo">
-            <a href="/" class="footer-logo-link">
-              <img src="images/circle logo.png" alt="DAGA Education Logo" class="footer-logo-img">
-              <span class="footer-logo-text">DAGA Education</span>
-            </a>
-          </div>
-          <p class="footer-description">
-            Empowering future leaders through innovative education and practical learning experiences.
-          </p>
-          <div class="footer-social">
-            <a href="https://www.facebook.com/share/168rpjq5bm/" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/dnyansiddhi_academy/?igsh=MTdvMDNxam1ldjh6ZA%3D%3D#" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="https://www.youtube.com/@dnyansiddhiacademy" target="_blank" aria-label="YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29.94 29.94 0 0 0 1 12a29.94 29.94 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29.94 29.94 0 0 0 23 12a29.94 29.94 0 0 0-.46-5.58z"></path>
-                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
-              </svg>
-            </a>
-            <a href="https://whatsapp.com/channel/0029VbBUh6N4NVinozfFmp3M" target="_blank" aria-label="WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor">
-                <path d="M16.004 2.003a13.994 13.994 0 0 0-12.02 21.16L2 30l7.077-1.948a13.993 13.993 0 1 0 6.927-26.05zM16 26.99a10.985 10.985 0 0 1-5.62-1.537l-.4-.237-4.198 1.156 1.122-4.093-.26-.42A10.99 10.99 0 1 1 16 26.99zm6.018-8.36c-.33-.165-1.948-.963-2.25-1.073-.302-.11-.522-.165-.742.166s-.853 1.074-1.045 1.296c-.192.22-.385.247-.714.082-.33-.165-1.392-.513-2.65-1.638-.98-.873-1.64-1.952-1.832-2.28-.192-.33-.021-.508.144-.672.148-.147.33-.384.495-.576.165-.192.22-.33.33-.55.11-.22.055-.412-.028-.577-.083-.165-.742-1.785-1.018-2.45-.27-.648-.545-.56-.742-.57l-.633-.012a1.23 1.23 0 0 0-.887.412c-.308.33-1.16 1.132-1.16 2.76 0 1.628 1.188 3.2 1.353 3.42.165.22 2.345 3.57 5.682 5.003 2.338.992 3.252 1.077 4.425.908.71-.106 1.948-.793 2.222-1.56.275-.77.275-1.43.192-1.56-.082-.13-.303-.22-.633-.385z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="about_us.html">About Us</a></li>
-            <li><a href="staff.html">Our Staff</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="event.html">Events</a></li>
-            <li><a href="contact_us.html#contact">About DAGA</a></li>
-            <li><a href="photo_gallary.html">Photo Gallery</a></li>
-            <li><a href="video_gallary.html">Video Gallery</a></li>
-            <li><a href="contact_us.html#map">Find Us on Google Maps📍</a></li>
-          </ul>
-        </div>
-
-        <!-- Programs -->
-        <div class="footer-column">
-          <h3>Programs</h3>
-          <ul class="footer-links">
-            <li><a href="#programs">Junior Programs (4th–5th)</a></li>
-            <li><a href="#programs">Middle School (6th–8th)</a></li>
-            <li><a href="#programs">High School (9th–10th)</a></li>
-            <li><a href="#programs">Foundation Courses (JEE/NEET/CET)</a></li>
-            <li><a href="#programs">SPI & Military School Prep</a></li>
-
-          </ul>
-        </div>
-
-
-        <!-- Contact Us -->
-        <div class="footer-column">
-          <h3>Contact Us</h3>
-          <ul class="footer-links">
-            <li>📞 +91-9518373747</li>
-            <li>📞 +91-8788148420</li>
-            <li>📞 +91-7744062018</li>
-            <li>📞 +91-8010954006</li>
-            <li class="footer-inline-icon">
-              <a href="mailto:example@email.com">✉️dnyansiddhigurukul@gmail.com</a>
-            </li>          
-            <li>📍 Zolambi Vasahat,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nagaon Road, Ashta<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tal-Walwa, Dist-Sangli,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maharashtra – 416301</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Bottom Footer -->
-      <div class="footer-bottom">
-        <div class="copyright">
-          <p>&copy; 2025 DAGA Education. All rights reserved.</p>
-        </div>
-        <div class="footer-bottom-links">
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#accessibility">Accessibility</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer (injected by shared-footer.js) -->
+  <footer class="footer"></footer>
 
   <!-- Chat Widget -->
   <div class="chat-widget" id="chat-widget">
@@ -435,21 +106,38 @@
         </div>
       </div>
       <div class="chat-input">
-        <textarea 
-          id="chat-input-field" 
-          placeholder="Type your message..."
-          rows="1"
-        ></textarea>
+        <textarea id="chat-input-field" placeholder="Type your message..." rows="1"></textarea>
         <button id="chat-send">Send</button>
       </div>
     </div>
   </div>
 
+  <!-- Announcement Toast Popup -->
+  <div id="announcement-toast" class="announcement-toast">
+    <div class="toast-header">
+      <span class="toast-title">📢 Announcement</span>
+      <button id="toast-close" class="toast-close" aria-label="Close">×</button>
+    </div>
+    <p class="toast-date" id="toast-date"></p>
+    <p class="toast-notice-title" id="toast-notice-title"></p>
+    <p class="toast-text" id="toast-text"></p>
+    <div class="toast-footer">
+      <a id="toast-link" class="toast-link" href="#" style="display:none;">Read more →</a>
+    </div>
+    <div class="toast-progress"><div class="toast-progress-bar"></div></div>
+  </div>
+
+  <!-- Shared Components -->
+  <script src="js/shared-header.js"></script>
+  <script src="js/shared-footer.js"></script>
+  <script src="js/dark-mode.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/announcement.js"></script>
+  <script src="js/announcement-toast.js"></script>
+
   <script type="module" src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/testimonials.js"></script>
-  <script src="js/programs.js"></script>
   <script src="js/chat.js"></script>
+  <!-- Dynamic staff loader — fetches from /api/v1/staff -->
+  <script src="js/staff-api.js"></script>
 </body>
 </html>

@@ -14,30 +14,37 @@
   .staff-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* reduced gap */
+    justify-content: center; /* centers incomplete last rows */
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .staff-card {
     background: #fff;
     border-radius: 15px;
-    width: 172px; /* 75% of 230px */
-    padding: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    width: calc(50% - 8px); /* 2 per row on mobile */
+    max-width: 190px;
+    padding: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    transform-origin: top center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .staff-card:hover {
-    transform: translateY(-5px); /* only lift effect, not scale */
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
   }
   
   .staff-card img {
     width: 100%;
-    border-radius: 12px;
-    height: 200px; 
+    height: 180px;
+    border-radius: 12px; 
     object-fit: cover;
+    margin-bottom: 12px;
   }
   
   .staff-name {
@@ -101,4 +108,15 @@
     color: rgba(255, 255, 255, 0.9);
     animation: fadeInUp 0.8s ease 0.3s both;
   }
-  
+
+/* Responsive Staff Grid */
+@media screen and (min-width: 576px) {
+  .staff-card {
+    width: calc(33.333% - 12px);
+    max-width: 190px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .staff-grid { gap: 20px; }
+  .staff-card { width: 190px; }
+}

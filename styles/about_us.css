@@ -114,7 +114,34 @@
   .intro-section {
     padding: var(--space-16) 0;
     background-color: white;
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Baloo 2', 'Noto Sans Devanagari', cursive;
+  }
+
+  /* Global Marathi font for Devanagari script across all sections */
+  .intro-text h2,
+  .intro-text p,
+  .intro-text .subtitle,
+  .stat-label,
+  .vision-content h2,
+  .vision-quote p,
+  .vision-detail p,
+  .mission-text h2,
+  .mission-quote p,
+  .mission-pillar h3,
+  .mission-pillar p,
+  .section-header h2,
+  .section-header p,
+  .facility-content h3,
+  .facility-content p,
+  .facility-item h3,
+  .facility-item p,
+  .choose-us-card h3,
+  .choose-us-card p,
+  .benefit-item h3,
+  .benefit-item p,
+  .cta-content h2,
+  .cta-content p {
+    font-family: 'Baloo 2', 'Noto Sans Devanagari', 'Mukta', sans-serif;
   }
   
   .intro-content {
@@ -762,8 +789,10 @@
   /* Call to Action Section */
   .cta-section {
     padding: var(--space-16) 0;
-    background-color: var(--primary-700);
-    color: white;
+    background-color: #ffffff;
+    color: var(--gray-800);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
   }
   
   .cta-content {
@@ -776,12 +805,13 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: var(--space-4);
+    color: var(--gray-800);
   }
   
   .cta-content p {
     font-size: 1.125rem;
     margin-bottom: var(--space-8);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gray-600);
   }
   
   .cta-buttons {
@@ -792,21 +822,34 @@
   }
   
   .cta-section .primary-btn {
-    background-color: var(--secondary-500);
+    background-color: var(--primary-600);
     color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
   }
   
   .cta-section .primary-btn:hover {
-    background-color: var(--secondary-400);
+    background-color: var(--primary-700);
   }
   
   .cta-section .secondary-btn {
-    border-color: white;
-    color: white;
+    border: 2px solid var(--primary-600);
+    color: var(--primary-600);
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    background: transparent;
   }
   
   .cta-section .secondary-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--primary-50);
   }
   
   /* Animations */

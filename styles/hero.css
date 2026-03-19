@@ -44,25 +44,57 @@
   animation: fadeInUp 0.8s ease 0.4s both;
 }
 
+.hero-btns .primary-btn,
+.hero-btns .secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
 .hero .primary-btn {
   background-color: var(--secondary-500);
   color: var(--primary-800);
+  border-color: var(--secondary-500);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
 }
 
 .hero .primary-btn:hover {
   background-color: var(--secondary-400);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--secondary-400);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+.hero .primary-btn .icon {
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.hero .primary-btn:hover .icon {
+  transform: translateX(4px);
 }
 
 .hero .secondary-btn {
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.5);
   color: white;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
 }
 
 .hero .secondary-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.18);
+  border-color: white;
   color: white;
+  transform: translateY(-3px);
 }
 
 /* Image Slider */

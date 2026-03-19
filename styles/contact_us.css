@@ -113,56 +113,89 @@
   /* Contact Information Section */
   .contact-info-section {
     padding: var(--space-16) 0;
-    background-color: white;
+    background-color: var(--gray-100);
   }
-  
+
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: var(--space-6);
   }
-  
+
   .contact-card {
     background-color: white;
-    padding: var(--space-6);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    padding: var(--space-8) var(--space-6);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     text-align: center;
-    transition: all var(--transition-normal);
+    transition: all 0.35s ease;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(135deg, var(--primary-500), var(--primary-300)) 1;
+    position: relative;
+    overflow: hidden;
   }
-  
+
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-300));
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
   .contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 86, 164, 0.12);
   }
-  
+
   .contact-icon {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
     margin: 0 auto var(--space-4);
-    background-color: var(--primary-100);
+    background: linear-gradient(135deg, var(--primary-100), #e0e7ff);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease;
   }
-  
+
+  .contact-card:hover .contact-icon {
+    transform: scale(1.08);
+  }
+
   .contact-icon img {
     width: 32px;
     height: 32px;
     color: var(--primary-600);
   }
-  
+
   .contact-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: var(--gray-800);
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-3);
   }
-  
+
   .contact-card p {
     color: var(--gray-600);
     margin-bottom: var(--space-1);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .contact-card a {
+    color: var(--primary-600);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .contact-card a:hover {
+    color: var(--primary-700);
+    text-decoration: underline;
   }
   
   /* Map and Form Section */

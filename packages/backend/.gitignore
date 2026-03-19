@@ -1,0 +1,22 @@
+# ─── Environment Variables (NEVER commit) ─────────────────────
+.env
+.env.*
+!.env.example
+
+# ─── Dependencies ─────────────────────────────────────────────
+node_modules/
+
+# ─── Build / Cache ────────────────────────────────────────────
+dist/
+.cache/
+
+# ─── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+
+# ─── Uploads (local dev — use Cloudinary in production) ────────
+uploads/
+
+# ─── OS ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

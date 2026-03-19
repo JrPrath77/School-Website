@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingMessage = addMessage('कृपया थांबा...', 'bot');
 
     try {
-      const response = await fetch('http://localhost:3001/ask', {
+      const response = await fetch('http://localhost:3001/api/v1/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: message }),

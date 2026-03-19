@@ -1,0 +1,58 @@
+/* Skeleton Shimmer Loaders */
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-item {
+  opacity: 1 !important;
+}
+
+/* Gallery fade-in animation */
+.gallery-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.gallery-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Masonry-like gallery grid */
+.gallery-grid.masonry {
+  columns: 4 280px;
+  column-gap: 16px;
+}
+
+.gallery-grid.masonry .gallery-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+
+/* Load More button hover */
+.load-more-btn:hover {
+  background: #4f46e5 !important;
+  color: #fff !important;
+}
+
+/* Notice card responsive */
+@media (max-width: 640px) {
+  .notice-card {
+    padding: 16px !important;
+  }
+}
+
+/* Dark mode skeleton */
+body.dark .skeleton-shimmer,
+[data-theme="dark"] .skeleton-shimmer {
+  background: linear-gradient(90deg, #2a2a2a 25%, #333 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+}
