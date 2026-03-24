@@ -3,7 +3,8 @@
 (function () {
   'use strict';
 
-  const API_BASE = 'http://localhost:3001/api/v1';
+  // API_BASE is the global from js/config.js
+  const NOTICES_BASE = API_BASE + '/api/v1';
   const SESSION_KEY = 'daga-announcement-dismissed';
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -18,7 +19,7 @@
 
   async function fetchLatestNotice() {
     try {
-      const response = await fetch(API_BASE + '/notices?limit=1');
+      const response = await fetch(NOTICES_BASE + '/notices?limit=1');
       if (!response.ok) return;
       
       const data = await response.json();

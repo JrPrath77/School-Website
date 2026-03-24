@@ -2,7 +2,7 @@
  * Video API Integration
  * Fetches videos dynamically from the backend API.
  */
-const API_BASE = 'http://localhost:3001'; // Change to your deployed URL
+// API_BASE is defined in js/config.js — load that script before this one
 
 // Create skeleton loader
 function createVideoSkeleton(count = 4) {

@@ -126,11 +126,11 @@
     </div>
   </div>
 
-  <!-- Shared Components -->
   <script src="js/shared-header.js"></script>
   <script src="js/shared-footer.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/scroll-reveal.js"></script>
+  <script src="js/config.js"></script>
   <script src="js/announcement.js"></script>
   <script src="js/announcement-toast.js"></script>
   <script src="js/chat.js"></script>
@@ -145,7 +145,7 @@
   const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';          // From EmailJS → Email Templates
   // ────────────────────────────────────────────────────────────────────────────
 
-  const API_BASE = 'http://localhost:3001'; // Change to your deployed URL in production
+  // API_BASE is loaded from js/config.js (script above)
 
   // Initialize EmailJS
   if (EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') {

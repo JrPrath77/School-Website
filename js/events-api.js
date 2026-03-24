@@ -3,6 +3,7 @@
  * Fetches events dynamically from the backend and renders them.
  */
 
+// API_BASE is defined in js/config.js — load that script before this one
 function createEventSkeleton(count = 3) {
   return Array(count).fill('').map(() => `
     <div class="news-card skeleton-item">
@@ -52,7 +53,6 @@ function renderEventCard(event) {
 }
 
 async function loadEvents() {
-  const API_BASE = 'http://localhost:3001'; // Update to your deployed URL in prod
   const eventsGrid = document.getElementById('events-grid');
   if (!eventsGrid) return;
 
@@ -62,10 +62,7 @@ async function loadEvents() {
   const queryParams = [];
   if (limitParam) queryParams.push(`limit=${limitParam}`);
   if (featuredParam === 'true') queryParams.push('featured=true');
-  
-  // Cache buster to ensure the user always sees fresh data during tests
-  queryParams.push(`_t=${new Date().getTime()}`);
-  
+
   const url = `${API_BASE}/api/v1/events?${queryParams.join('&')}`;
 
   // Provide initial skeleton

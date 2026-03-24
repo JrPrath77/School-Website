@@ -1,0 +1,123 @@
+name: 🚀 Deploy to Vercel (CI/CD)
+
+on:
+  push:
+    branches:
+      - main
+
+# Cancel any in-progress run for the same branch to avoid double-deploys
+concurrency:
+  group: vercel-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─────────────────────────────────────────────
+  # JOB 1: Deploy User Panel (root — static HTML/CSS/JS)
+  # ─────────────────────────────────────────────
+  deploy-user-panel:
+    name: Deploy User Panel (Frontend)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 📦 Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: 🔍 Verify Secrets Are Set
+        run: |
+          if [ -z "${{ secrets.VERCEL_TOKEN }}" ]; then
+            echo "❌ VERCEL_TOKEN secret is not set!" && exit 1
+          fi
+          if [ -z "${{ secrets.VERCEL_ORG_ID }}" ]; then
+            echo "❌ VERCEL_ORG_ID secret is not set!" && exit 1
+          fi
+          if [ -z "${{ secrets.VERCEL_PROJECT_ID_FRONTEND }}" ]; then
+            echo "❌ VERCEL_PROJECT_ID_FRONTEND secret is not set!" && exit 1
+          fi
+          echo "✅ All required secrets are present."
+
+      - name: 🚀 Deploy User Panel to Vercel (Production)
+        run: |
+          vercel pull --yes \
+            --environment=production \
+            --token=${{ secrets.VERCEL_TOKEN }} \
+            --scope=${{ secrets.VERCEL_ORG_ID }}
+
+          vercel build --prod \
+            --token=${{ secrets.VERCEL_TOKEN }}
+
+          vercel deploy --prebuilt --prod \
+            --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_FRONTEND }}
+
+  # ─────────────────────────────────────────────
+  # JOB 2: Deploy Admin Panel (packages/admin — React/Vite)
+  # ─────────────────────────────────────────────
+  deploy-admin-panel:
+    name: Deploy Admin Panel (React/Vite)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 📦 Install Admin Panel Dependencies
+        run: |
+          cd packages/admin
+          npm install
+
+      - name: 🔨 Build Admin Panel
+        run: |
+          cd packages/admin
+          npm run build
+        env:
+          # Pass any Vite env vars your admin panel needs here
+          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
+
+      - name: 📦 Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: 🔍 Verify Secrets Are Set
+        run: |
+          if [ -z "${{ secrets.VERCEL_TOKEN }}" ]; then
+            echo "❌ VERCEL_TOKEN secret is not set!" && exit 1
+          fi
+          if [ -z "${{ secrets.VERCEL_ORG_ID }}" ]; then
+            echo "❌ VERCEL_ORG_ID secret is not set!" && exit 1
+          fi
+          if [ -z "${{ secrets.VERCEL_PROJECT_ID_ADMIN }}" ]; then
+            echo "❌ VERCEL_PROJECT_ID_ADMIN secret is not set!" && exit 1
+          fi
+          echo "✅ All required secrets are present."
+
+      - name: 🚀 Deploy Admin Panel to Vercel (Production)
+        run: |
+          cd packages/admin
+
+          vercel pull --yes \
+            --environment=production \
+            --token=${{ secrets.VERCEL_TOKEN }} \
+            --scope=${{ secrets.VERCEL_ORG_ID }}
+
+          vercel build --prod \
+            --token=${{ secrets.VERCEL_TOKEN }}
+
+          vercel deploy --prebuilt --prod \
+            --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_ADMIN }}

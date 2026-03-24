@@ -105,7 +105,7 @@
         </div>
         <div class="contact-form-container slide-in-right">
           <h2>Send Us a Message</h2>
-          <form id="contactForm" class="contact-form" method="POST" action="http://localhost:3000/contact">
+          <form id="contactForm" class="contact-form" method="POST">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" required>
@@ -229,7 +229,8 @@
         subject: this.subject.value,
         message: this.message.value
       };
-      const res = await fetch('http://localhost:3000/contact', {
+      // API_BASE is loaded from js/config.js
+      const res = await fetch(`${API_BASE}/api/v1/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -240,11 +241,11 @@
     });
   </script>
 
-  <!-- Shared Components -->
   <script src="js/shared-header.js"></script>
   <script src="js/shared-footer.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/scroll-reveal.js"></script>
+  <script src="js/config.js"></script>
   <script src="js/announcement.js"></script>
   <script src="js/announcement-toast.js"></script>
   <script type="module" src="js/main.js"></script>

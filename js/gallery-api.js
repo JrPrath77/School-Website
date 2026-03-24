@@ -2,7 +2,7 @@
  * Gallery API Integration
  * Fetches images dynamically from the backend API with pagination and filtering.
  */
-const API_BASE = 'http://localhost:3001'; // Change to your deployed URL
+// API_BASE is defined in js/config.js — load that script before this one
 
 let currentPage = 1;
 let hasMore = true;

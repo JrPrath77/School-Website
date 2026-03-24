@@ -3,7 +3,8 @@
 (function () {
   'use strict';
 
-  const API_BASE = 'http://localhost:3001/api/v1';
+  // API_BASE is the global from js/config.js
+  const STAFF_BASE = API_BASE + '/api/v1';
   const PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%23e0e7ff\'/%3E%3Ccircle cx=\'75\' cy=\'55\' r=\'28\' fill=\'%234f46e5\'/%3E%3Cellipse cx=\'75\' cy=\'130\' rx=\'45\' ry=\'35\' fill=\'%234f46e5\'/%3E%3C/svg%3E';
 
   // Department display config
@@ -26,7 +27,7 @@
     if (!container) return;
 
     try {
-      const response = await fetch(API_BASE + '/staff');
+      const response = await fetch(STAFF_BASE + '/staff');
       if (!response.ok) throw new Error('API error ' + response.status);
 
       const data = await response.json();

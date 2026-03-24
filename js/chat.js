@@ -12,12 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   chatToggle.addEventListener('click', () => {
-    console.log('💬 Chat toggle clicked');
     chatContainer.classList.add('active');
   });
 
   chatClose.addEventListener('click', () => {
-    console.log('❌ Chat close clicked');
     chatContainer.classList.remove('active');
   });
 
@@ -45,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingMessage = addMessage('कृपया थांबा...', 'bot');
 
     try {
-      const response = await fetch('http://localhost:3001/api/v1/chat', {
+      const response = await fetch(`${API_BASE}/api/v1/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: message }),

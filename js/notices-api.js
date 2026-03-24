@@ -2,7 +2,7 @@
  * Notices API Integration
  * Fetches active notices from the backend and displays them on the homepage.
  */
-const API_BASE = 'http://localhost:3001'; // Change to your deployed URL
+// API_BASE is defined in js/config.js — load that script before this one
 
 // Priority badge styles
 const priorityStyles = {
