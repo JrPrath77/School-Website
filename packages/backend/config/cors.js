@@ -7,16 +7,17 @@ const configureCors = () => {
 
   return cors({
     origin: (origin, callback) => {
-      // Block null origin (file:// documents, sandboxed iframes — a CSRF vector)
-      if (!origin) return callback(new Error('Requests without an origin are not allowed.'));
+      // allow requests with no origin (like Postman / health checks)
+      if (!origin) return callback(null, true);
+
       if (allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
-        callback(new Error(`CORS not allowed for origin: ${origin}`));
+        callback(new Error(`Not allowed by CORS`));
       }
     },
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],  // PATCH needed for status updates
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   });
 };
