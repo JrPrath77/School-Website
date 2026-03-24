@@ -3,8 +3,7 @@
 (function () {
   'use strict';
 
-  // API_BASE is the global from js/config.js
-  const NOTICES_BASE = API_BASE + '/api/v1';
+  const NOTICES_BASE = window.SITE_CONFIG.API_BASE + '/api/v1';
   const SESSION_KEY = 'daga-announcement-dismissed';
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -32,7 +31,7 @@
       showAnnouncementBanner(notice);
     } catch (error) {
       // Silently fail — don't block page load
-      console.log('Notice fetch skipped — backend may not be running');
+      // Error gracefully handled by UI
     }
   }
 

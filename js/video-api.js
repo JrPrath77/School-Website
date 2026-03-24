@@ -2,7 +2,7 @@
  * Video API Integration
  * Fetches videos dynamically from the backend API.
  */
-// API_BASE is defined in js/config.js — load that script before this one
+const API_BASE = window.SITE_CONFIG.API_BASE;
 
 // Create skeleton loader
 function createVideoSkeleton(count = 4) {

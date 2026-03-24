@@ -3,8 +3,7 @@
 (function () {
   'use strict';
 
-  // API_BASE is the global from js/config.js
-  const STAFF_BASE = API_BASE + '/api/v1';
+  const STAFF_BASE = window.SITE_CONFIG.API_BASE + '/api/v1';
   const PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%23e0e7ff\'/%3E%3Ccircle cx=\'75\' cy=\'55\' r=\'28\' fill=\'%234f46e5\'/%3E%3Cellipse cx=\'75\' cy=\'130\' rx=\'45\' ry=\'35\' fill=\'%234f46e5\'/%3E%3C/svg%3E';
 
   // Department display config
@@ -62,7 +61,7 @@
       });
 
     } catch (err) {
-      console.log('Staff API unavailable:', err.message);
+      // Error gracefully handled by UI
       renderFallback(container, 'Staff information could not be loaded. Please try again later or contact the school directly.');
     }
   }

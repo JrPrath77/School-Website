@@ -229,7 +229,7 @@
         subject: this.subject.value,
         message: this.message.value
       };
-      // API_BASE is loaded from js/config.js
+      const API_BASE = window.SITE_CONFIG.API_BASE;
       const res = await fetch(`${API_BASE}/api/v1/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

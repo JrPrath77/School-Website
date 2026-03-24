@@ -3,7 +3,7 @@
  * Fetches events dynamically from the backend and renders them.
  */
 
-// API_BASE is defined in js/config.js — load that script before this one
+const API_BASE = window.SITE_CONFIG.API_BASE;
 function createEventSkeleton(count = 3) {
   return Array(count).fill('').map(() => `
     <div class="news-card skeleton-item">
@@ -95,9 +95,4 @@ async function loadEvents() {
   }
 }
 
-// Safe init: call directly if DOM already loaded, otherwise wait for the event
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadEvents);
-} else {
-  loadEvents();
-}
+document.addEventListener('DOMContentLoaded', loadEvents);

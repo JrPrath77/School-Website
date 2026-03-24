@@ -3,8 +3,7 @@
 (function () {
   'use strict';
 
-  // API_BASE is the global from js/config.js
-  const NOTICES_BASE = API_BASE + '/api/v1';
+  const NOTICES_BASE = window.SITE_CONFIG.API_BASE + '/api/v1';
   const STORAGE_KEY = 'daga-announcement-dismissed';
   const AUTO_CLOSE_MS = 10000; // 10 seconds
 
@@ -44,7 +43,7 @@
       showToast(notice);
     } catch (err) {
       // Silently fail — don't block page load
-      console.log('Announcement toast skipped:', err.message || err);
+      // Error gracefully handled by UI
     }
   }
 

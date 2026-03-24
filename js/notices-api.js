@@ -2,7 +2,7 @@
  * Notices API Integration
  * Fetches active notices from the backend and displays them on the homepage.
  */
-// API_BASE is defined in js/config.js — load that script before this one
+const API_BASE = window.SITE_CONFIG.API_BASE;
 
 // Priority badge styles
 const priorityStyles = {

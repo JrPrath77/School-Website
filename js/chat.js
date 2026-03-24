@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingMessage = addMessage('कृपया थांबा...', 'bot');
 
     try {
-      const response = await fetch(`${API_BASE}/api/v1/chat`, {
+      const response = await fetch(`${window.SITE_CONFIG.API_BASE}/api/v1/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: message }),

@@ -2,7 +2,7 @@
  * Gallery API Integration
  * Fetches images dynamically from the backend API with pagination and filtering.
  */
-// API_BASE is defined in js/config.js — load that script before this one
+const API_BASE = window.SITE_CONFIG.API_BASE;
 
 let currentPage = 1;
 let hasMore = true;

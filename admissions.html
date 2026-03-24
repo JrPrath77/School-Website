@@ -145,7 +145,7 @@
   const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';          // From EmailJS → Email Templates
   // ────────────────────────────────────────────────────────────────────────────
 
-  // API_BASE is loaded from js/config.js (script above)
+  const API_BASE = window.SITE_CONFIG.API_BASE;
 
   // Initialize EmailJS
   if (EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') {
