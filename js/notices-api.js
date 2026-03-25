@@ -2,8 +2,6 @@
  * Notices API Integration
  * Fetches active notices from the backend and displays them on the homepage.
  */
-const API_BASE = window.SITE_CONFIG.API_BASE;
-
 // Priority badge styles
 const priorityStyles = {
   normal: { bg: '#e0f2fe', color: '#0369a1', label: 'Notice' },
@@ -42,7 +40,7 @@ async function loadNotices() {
   if (!container) return;
 
   try {
-    const response = await fetch(`${API_BASE}/api/v1/notices`);
+    const response = await fetch(`${window.SITE_CONFIG.API_BASE}/api/v1/notices`);
     const notices = await response.json();
 
     if (notices.length === 0) {

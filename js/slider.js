@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.querySelector('.slider-arrow.prev');
   const nextBtn = document.querySelector('.slider-arrow.next');
   
+  // Exit early if slider elements don't exist on this page
+  if (!sliderTrack || !prevBtn || !nextBtn || !slides.length) return;
+
   let currentSlide = 0;
   const totalSlides = slides.length;
   let autoplayInterval;
